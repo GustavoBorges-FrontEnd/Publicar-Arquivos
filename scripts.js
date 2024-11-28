@@ -1,3 +1,5 @@
+// ----------ENVIAR FOTOS ----------------
+
 const uploadBtn = document.getElementById("upload-btn");
 const inputUpload = document.getElementById("image-upload")
 
@@ -37,10 +39,11 @@ inputUpload.addEventListener("change", async (evento) => {
     }
 })
 
+
+// ------------------------ REMOVE TAGS ---------------------
+
 const inputTags = document.getElementById("input-tags");
 const listaTags = document.getElementById("lista-tags");
-
-
 
 listaTags.addEventListener("click", (evento) => {
     if (evento.target.classList.contains("remove-tag")) {
@@ -48,6 +51,8 @@ listaTags.addEventListener("click", (evento) => {
         listaTags.removeChild(tagQueQueremosRemover);
     }
 })
+
+// -------------------------- TAGS DISPONIVEIS PARA O USUARIO --------------------
 
 const tagsDisponiveis = ["Front-end", "Programação", "Data Science", "Full-stack", "HTML", "CSS", "JavaScript"];
 
@@ -58,6 +63,8 @@ async function verificaTagsDisponiveis(tagTexto) {
         }, 1000)
     })
 }
+
+// --------------------------- ENVIANDO TAGS ---------------------------------
 
 inputTags.addEventListener("keypress", async (evento) => {
     if (evento.key === "Enter") {
@@ -81,6 +88,8 @@ inputTags.addEventListener("keypress", async (evento) => {
         }
     }
 })
+
+// ---------------- SIMULAÇÃO DE ENVIO PARA O BANCO DE DADOS -----------------
 
 const botaoPublicar = document.querySelector(".botao-publicar");
 
@@ -114,6 +123,8 @@ botaoPublicar.addEventListener("click", async (evento) => {
     }
 
 })
+
+// -------------------------------- LIMPA O FORMULARIO -------------------------------------
 
 const botaoDescartar = document.querySelector(".botao-descartar");
 
