@@ -1,7 +1,8 @@
-// ----------ENVIAR FOTOS ----------------
-
 const uploadBtn = document.getElementById("upload-btn");
 const inputUpload = document.getElementById("image-upload")
+
+
+//------------LER ARQUIVOS-----------------
 
 uploadBtn.addEventListener("click", () => {
     inputUpload.click();
@@ -21,6 +22,8 @@ function lerConteudoDoArquivo(arquivo) {
         leitor.readAsDataURL(arquivo)
     })
 }
+
+//------------------ENVIA ARQUIVOS------------------------
 
 const imagemPrincipal = document.querySelector(".main-imagem");
 const nomeDaImagem = document.querySelector(".container-imagem-nome p");
